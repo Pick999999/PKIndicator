@@ -49,22 +49,28 @@
 วางโค้ดเหล่านี้ในส่วน `<head>` หรือก่อนปิดแท็ก `</body>`:
 
 ```html
-<!-- 1. Deriv API (หัวใจหลักในการเชื่อมต่อ) -->
+<!-- 1. Deriv API (หัวใจหลักในการเชื่อมต่อและรับข้อมูล Real-time) -->
+<!-- หน้าที่: เชื่อมต่อ WebSocket, ดึงกราฟย้อนหลัง, สมัครรับราคา Real-time, จัดการการเชื่อมต่อใหม่เมื่อเน็ตหลุด -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/deriv-api.js"></script>
 
-<!-- 2. ไลบรารีคำนวณพื้นฐาน (สูตรคณิตศาสตร์ต่างๆ) -->
+<!-- 2. Basic Indicators (สูตรคณิตศาสตร์พื้นฐาน) -->
+<!-- หน้าที่: รวมสูตรคำนวณดิบๆ เช่น SMA, EMA, RSI, Bollinger Bands ให้ไฟล์อื่นเรียกใช้ -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/indicators.js"></script>
 
-<!-- 3. ไลบรารี SMC (จำเป็นสำหรับการวิเคราะห์ขั้นสูง) -->
+<!-- 3. SMC Indicator (การวิเคราะห์โครงสร้างตลาดขั้นสูง) -->
+<!-- หน้าที่: วิเคราะห์ Market Structure (BOS, CHoCH), Order Blocks, FVG, Swing Points -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/SMCIndicator.standalone.js"></script> 
 
-<!-- 4. ไลบรารี WebGPU (ทางเลือก - สำหรับเร่งความเร็ว) -->
+<!-- 4. WebGPU (ตัวเร่งความเร็วด้วยการ์ดจอ) -->
+<!-- หน้าที่: ช่วยคำนวณ RSI และ Choppiness สำหรับหลายๆ Asset พร้อมกัน (เร็วกว่า CPU มากในข้อมูลเยอะๆ) -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/webgpu-indicators.js"></script>
 
-<!-- 5. Asset Loader (สำหรับดึงข้อมูลหลายตัวพร้อมกัน) -->
+<!-- 5. Asset Loader (ตัวจัดการโหลดข้อมูลหลายตัว) -->
+<!-- หน้าที่: สั่ง DerivAPI ให้โหลดข้อมูลหลายคู่เงินพร้อมกัน (Parallel) และสั่งคำนวณ Indicator ทีเดียวจบ -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/multi-asset-loader.js"></script>
 
-<!-- 6. Analysis Generator V2 (ตัวประมวลผลและรวบรวมข้อมูล) -->
+<!-- 6. Analysis Generator V2 (ตัวรวบรวมและสร้างผลวิเคราะห์สุดท้าย) -->
+<!-- หน้าที่: "ผู้จัดการใหญ่" ที่เอาข้อมูลดิบ + ผลคำนวณ SMC + WebGPU มารวมกันเป็นก้อนข้อมูลพร้อมใช้งาน (analysisArray) -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/clsAnalysisGeneratorV2.js"></script>
 ```
 
