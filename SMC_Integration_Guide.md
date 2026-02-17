@@ -113,15 +113,15 @@ const generator = new AnalysisGeneratorV2(candleData, options, gpu);
 3.  เรียกใช้ในไฟล์ HTML ผ่าน URL ของ **jsDelivr**
 
 ### รูปแบบ URL:
-`https://cdn.jsdelivr.net/gh/[ชื่อUser]/[ชื่อRepo]@[Version/Branch]/[Path/To/File.js]`
+`https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/[File.js]`
 
 ### ตัวอย่างการเรียกใช้:
 ```html
 <!-- เรียกจาก GitHub ของคุณเอง -->
-<script src="https://cdn.jsdelivr.net/gh/YourUserName/MyTradingLib@main/js/indicators.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/YourUserName/MyTradingLib@main/js/SMCIndicator.standalone.js"></script> 
-<script src="https://cdn.jsdelivr.net/gh/YourUserName/MyTradingLib@main/js/multi-asset-loader.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/YourUserName/MyTradingLib@main/js/clsAnalysisGeneratorV2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/indicators.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/SMCIndicator.standalone.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/multi-asset-loader.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/clsAnalysisGeneratorV2.js"></script>
 ```
 
 **ข้อดี:**
