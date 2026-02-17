@@ -131,3 +131,5 @@ const generator = new AnalysisGeneratorV2(candleData, options, gpu);
 *   ✅ **เร็ว**: ใช้ CDN ระดับโลกฟรีๆ
 
 **ข้อแนะนำ:** วิธีนี้เหมาะมากสำหรับการใช้งานส่วนตัวหรือทีมขนาดเล็ก (SME) แต่ข้อควรระวังคือ ถ้าแก้โค้ดผิดแล้ว push ขึ้น main ระบบที่ดึงไปใช้อาจจะพังตามกันได้ (ควรใช้ tag versioning หรือแยก branch dev/prod ถ้าจริงจัง)
+
+
