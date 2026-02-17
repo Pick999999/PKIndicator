@@ -65,3 +65,45 @@ charts.updateMA(0, maData);
 - ใช้ Deriv Demo App ID (1089) - ฟรี ไม่ต้องสมัคร
 - ข้อมูลเป็น demo data จาก Deriv
 - สามารถนำ Class ไปใช้ในโปรเจคอื่นได้ทันที
+********************************************************************
+
+# My Trading Library
+
+Library รวม JavaScript สำหรับการเทรด, การวิเคราะห์ Technical Analysis, SMC (Smart Money Concepts), และ WebGPU Acceleration
+
+## 📂 โครงสร้างไฟล์
+ไฟล์ทั้งหมดอยู่ใน root directory เพื่อให้เรียกใช้ง่าย:
+- `deriv-api.js`: API สำหรับเชื่อมต่อ Deriv
+- `multi-asset-loader.js`: สำหรับดึงข้อมูลหลายคู่เงินพร้อมกัน
+- `webgpu-indicators.js`: คำนวณอินดิเคเตอร์ด้วยการ์ดจอ (WebGPU)
+- `indicators.js`: สูตรคำนวณพื้นฐาน (SMA, EMA, RSI, etc.)
+- `SMCIndicator.js`: คำนวณ Smart Money Concepts
+- `clsAnalysisGeneratorV2.js`: ตัวสร้างการวิเคราะห์รวม (SMC + Basic Indicators)
+
+## 🚀 วิธีใช้งานผ่าน CDN (jsDelivr)
+
+คุณสามารถเรียกไฟล์เหล่านี้ไปใช้ในโปรเจกต์อื่นได้ทันทีผ่าน CDN (โดยเปลี่ยน `[YourGitHubUsername]/[RepoName]` เป็นของคุณ):
+
+```html
+<!-- 1. Deriv API -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/deriv-api.js"></script>
+
+<!-- 2. Basic Indicators -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/indicators.js"></script>
+
+<!-- 3. SMC Indicator -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/SMCIndicator.standalone.js"></script>
+
+<!-- 4. WebGPU (Optional) -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/webgpu-indicators.js"></script>
+
+<!-- 5. Asset Loader -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/multi-asset-loader.js"></script>
+
+<!-- 6. Analysis Generator -->
+<script src="https://cdn.jsdelivr.net/gh/[YourGitHubUsername]/[RepoName]@main/clsAnalysisGeneratorV2.js"></script>
+```
+
+อ่านรายละเอียดเพิ่มเติมได้ใน [SMC_Integration_Guide.md](SMC_Integration_Guide.md)
+
+- 
