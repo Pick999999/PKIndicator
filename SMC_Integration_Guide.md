@@ -50,23 +50,22 @@
 
 ```html
 <!-- 1. Deriv API (หัวใจหลักในการเชื่อมต่อ) -->
-<script src="deriv-api.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/deriv-api.js"></script>
 
 <!-- 2. ไลบรารีคำนวณพื้นฐาน (สูตรคณิตศาสตร์ต่างๆ) -->
-<script src="js/indicators.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/indicators.js"></script>
 
 <!-- 3. ไลบรารี SMC (จำเป็นสำหรับการวิเคราะห์ขั้นสูง) -->
-<!-- เลือกใช้ตัวใดตัวหนึ่งระหว่างตัวเต็ม หรือ standalone -->
-<script src="js/SMCIndicator.standalone.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/SMCIndicator.standalone.js"></script> 
 
 <!-- 4. ไลบรารี WebGPU (ทางเลือก - สำหรับเร่งความเร็ว) -->
-<script src="webgpu-indicators.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/webgpu-indicators.js"></script>
 
 <!-- 5. Asset Loader (สำหรับดึงข้อมูลหลายตัวพร้อมกัน) -->
-<script src="multi-asset-loader.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/multi-asset-loader.js"></script>
 
 <!-- 6. Analysis Generator V2 (ตัวประมวลผลและรวบรวมข้อมูล) -->
-<script src="js/clsAnalysisGeneratorV2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/clsAnalysisGeneratorV2.js"></script>
 ```
 
 ---
@@ -118,9 +117,23 @@ const generator = new AnalysisGeneratorV2(candleData, options, gpu);
 ### ตัวอย่างการเรียกใช้:
 ```html
 <!-- เรียกจาก GitHub ของคุณเอง -->
+
+<!-- 1. Deriv API -->
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/deriv-api.js"></script>
+
+<!-- 2. Basic Indicators -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/indicators.js"></script>
+
+<!-- 3. SMC Indicator -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/SMCIndicator.standalone.js"></script> 
+
+<!-- 4. WebGPU (Optional) -->
+<script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/webgpu-indicators.js"></script>
+
+<!-- 5. Asset Loader -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/multi-asset-loader.js"></script>
+
+<!-- 6. Analysis Generator -->
 <script src="https://cdn.jsdelivr.net/gh/Pick999999/PKIndicator@main/my-trading-lib/clsAnalysisGeneratorV2.js"></script>
 ```
 
@@ -131,5 +144,3 @@ const generator = new AnalysisGeneratorV2(candleData, options, gpu);
 *   ✅ **เร็ว**: ใช้ CDN ระดับโลกฟรีๆ
 
 **ข้อแนะนำ:** วิธีนี้เหมาะมากสำหรับการใช้งานส่วนตัวหรือทีมขนาดเล็ก (SME) แต่ข้อควรระวังคือ ถ้าแก้โค้ดผิดแล้ว push ขึ้น main ระบบที่ดึงไปใช้อาจจะพังตามกันได้ (ควรใช้ tag versioning หรือแยก branch dev/prod ถ้าจริงจัง)
-
-
